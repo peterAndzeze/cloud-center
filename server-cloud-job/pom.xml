@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cloud-center</artifactId>
+        <groupId>net.sw</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>server-cloud-job</artifactId>
+    <description>
+        基于elastic-job
+        降低使用者的繁琐配置
+        将集群管理，任务调度参数进行统一封装管理
+        使用者只需要关注业务本身即可
+    </description>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--  <dependency>
+              <groupId>org.apache.shardingsphere.elasticjob</groupId>
+              <artifactId>elasticjob-lite-core</artifactId>
+          </dependency>
+          <dependency>
+              <groupId>org.apache.shardingsphere.elasticjob</groupId>
+              <artifactId>elasticjob-lite-spring-boot-starter</artifactId>
+          </dependency>
+          <dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-web</artifactId>
+          </dependency>-->
+
+    </dependencies>
+
+
+
+</project>

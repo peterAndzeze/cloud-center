@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cloud-center</artifactId>
+        <groupId>net.sw</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>server-base-common-dailytools</module>
+        <module>server-base-common-http</module>
+    </modules>
+    <properties>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <commons-io.version>2.10.0</commons-io.version>
+        <commons-lang.version>1.2</commons-lang.version>
+        <fastjson.version>1.2.75</fastjson.version>
+        <server-base-common-dailytools.version>1.0</server-base-common-dailytools.version>
+
+    </properties>
+
+    <artifactId>server-base-common</artifactId>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-base-common-dailytools</artifactId>
+                <version>${server-base-common-dailytools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons-lang.version}</version>
+            </dependency>
+            <!-- 阿里JSON解析器 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
