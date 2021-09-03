@@ -1,0 +1,41 @@
+server:
+  port: 8081
+springfox:
+  documentation:
+    auto-startup: true
+swagger:
+  title: 蜜雪冰城
+  description: 蜜雪冰城api-22
+  version: 3.0.0.RELEASE
+  license: Apache License, Version 2.0
+  licenseUrl: https://www.mxbc.com
+  termsOfServiceUrl: https://www.mxbc.com
+  contact:
+    name: sunwei
+    url: https://www.mxbc.com
+    email: sunwei@mxbc.com
+  host: localhost:8080
+  base-package: com.swagger.api
+  base-path: /**
+  exclude-path: /error, /ops/**
+  docket:
+    example:
+      title: 蜜雪冰城-测试api
+      description: Starter for swagger 3.x
+      version: 1.0.0version
+      termsOfServiceUrl: https://www.mxbc.com
+      contact:
+        name: sunwei
+        url: https://www.mxbc.com
+        email: sunwei@mxbc.com
+  # 如果不配置 basePackage，则显示所有请求排除到 excludePath
+      basePackage: com.swagger.api.controller
+      excludePath: /ops/**,/error/**
+      #ignoredParameterTypes:
+      #   - com.swagger.api.form.UpUserResourceRecodeForm
+      global-operation-parameters:
+          - name: access_token
+            description: user access token
+            modelRef: string
+            parameterType: header
+            required: true

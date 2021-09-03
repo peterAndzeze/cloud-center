@@ -1,0 +1,17 @@
+META-INF/spring-configuration-metadata.json
+com/cloud/server/api/configuration/PathSelectors$1.class
+com/cloud/server/api/properties/SwaggerProperties$GlobalResponseMessageBody.class
+com/cloud/server/api/properties/SwaggerProperties.class
+com/cloud/server/api/properties/SwaggerProperties$DocketInfo.class
+com/cloud/server/api/SwaggerAutoConfiguration.class
+com/cloud/server/api/configuration/PathSelectors$2.class
+com/cloud/server/api/properties/SwaggerAuthorizationProperties.class
+com/cloud/server/api/properties/SwaggerProperties$GlobalResponseMessage.class
+com/cloud/server/api/configuration/PathSelectors.class
+com/cloud/server/api/configuration/SwaggerAuthorizationConfiguration.class
+com/cloud/server/api/configuration/SwaggerUiConfiguration.class
+com/cloud/server/api/configuration/DocketConfiguration.class
+com/cloud/server/api/properties/SwaggerUiProperties.class
+com/cloud/server/api/properties/SwaggerProperties$GlobalOperationParameter.class
+com/cloud/server/api/factory/DocketBeanFactoryPostProcessor.class
+com/cloud/server/api/properties/SwaggerProperties$Contact.class

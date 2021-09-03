@@ -1,0 +1,9 @@
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/configuration/SwaggerAuthorizationConfiguration.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/configuration/PathSelectors.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/configuration/SwaggerUiConfiguration.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/factory/DocketBeanFactoryPostProcessor.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/properties/SwaggerProperties.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/properties/SwaggerUiProperties.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/configuration/DocketConfiguration.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/SwaggerAutoConfiguration.java
+/Users/tom/Documents/project/cloud-center/spring-boot-starter-swagger/src/main/java/com/cloud/server/api/properties/SwaggerAuthorizationProperties.java

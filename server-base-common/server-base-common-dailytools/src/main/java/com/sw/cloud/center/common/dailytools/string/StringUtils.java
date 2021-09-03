@@ -726,7 +726,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
      * @param json
      * @param writeNullValue
      * @return
-     * @auth Chentao
      *
      */
     public static String createLinkString(JSONObject json, boolean writeNullValue) {
@@ -1086,7 +1085,13 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
     }
 
 
-
+    public static <T> T decode(String src, Map<String, T> all, T defaultVal) {
+        if (src == null) {
+            return defaultVal;
+        } else {
+            return all.get(src) == null ? defaultVal : all.get(src);
+        }
+    }
 
     /**
      * 如果传入字符串是encode的json字符串,进行decode
