@@ -18,6 +18,7 @@
         <module>cloud-front-ui</module>
         <module>cloud-dashboard</module>
         <module>cloud-sso</module>
+        <module>server-cloud-message</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

@@ -12,6 +12,7 @@
     <modules>
         <module>server-base-common-dailytools</module>
         <module>server-base-common-http</module>
+        <module>server-base-framework-spring</module>
     </modules>
     <properties>
         <commons-lang3.version>3.12.0</commons-lang3.version>

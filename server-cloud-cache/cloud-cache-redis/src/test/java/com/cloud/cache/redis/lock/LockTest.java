@@ -1,13 +1,12 @@
 package com.cloud.cache.redis.lock;
 
 import com.cloud.cache.redis.RedisTestApplication;
+import com.cloud.cache.redis.util.RedisCacheUtil;
+import io.lettuce.core.RedisClient;
+import io.lettuce.core.RedisURI;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import redis.clients.jedis.Jedis;
-
-import java.util.Collections;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @className: LockTest
@@ -18,7 +17,7 @@ import java.util.concurrent.CountDownLatch;
 public class LockTest  extends RedisTestApplication {
     @Autowired
     private RedisTemplate<Object,Object> redisTemplate;
-    @Test
+    /*@Test
     public void testLock(){
         CountDownLatch latch = new CountDownLatch(10);
 
@@ -53,7 +52,7 @@ public class LockTest  extends RedisTestApplication {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     @Test
     public void testLock1(){
@@ -79,7 +78,7 @@ public class LockTest  extends RedisTestApplication {
 
      */
 
-    public static boolean releaseDistributedLock(Jedis jedis, String lockKey, String requestId) {
+   /* public static boolean releaseDistributedLock(Jedis jedis, String lockKey, String requestId) {
 
 
 
@@ -96,7 +95,7 @@ public class LockTest  extends RedisTestApplication {
         }
 
         return false;
-    }
+    }*/
 
     private static final String LOCK_SUCCESS = "OK";
 
@@ -122,7 +121,7 @@ public class LockTest  extends RedisTestApplication {
 
      */
 
-    public static boolean tryGetDistributedLock(Jedis jedis, String lockKey, String requestId, int expireTime) {
+    /*public static boolean tryGetDistributedLock(Jedis jedis, String lockKey, String requestId, int expireTime) {
 
 
 
@@ -140,9 +139,20 @@ public class LockTest  extends RedisTestApplication {
 
 
 
+    }*/
+    @Autowired
+    private RedisURI redisURI;
+    @Autowired
+    private RedisCacheUtil redisCacheUtil;
+    @Autowired
+    private CustomerLettuceLock customerLettuceLock;
+    @Test
+    public void cusLockTest() throws InterruptedException {
+        boolean lock = customerLettuceLock.lock("name", null, 10l, false, 0);
+        System.out.println("加锁结果:"+lock);
+        Thread.sleep(100000);
+
     }
-
-
 
 
 }
