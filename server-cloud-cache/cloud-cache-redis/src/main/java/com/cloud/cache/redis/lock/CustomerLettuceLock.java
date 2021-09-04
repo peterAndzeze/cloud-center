@@ -231,10 +231,6 @@ public class CustomerLettuceLock {
         return EXEC_SUCCESS.equals(result);
 
     }
-
-
-
-
     static class ScheduleExecutor {
 
         public static void schedule(ScheduleTask task, long initialDelay, long period, TimeUnit unit) {
@@ -312,7 +308,6 @@ public class CustomerLettuceLock {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
             }
         }

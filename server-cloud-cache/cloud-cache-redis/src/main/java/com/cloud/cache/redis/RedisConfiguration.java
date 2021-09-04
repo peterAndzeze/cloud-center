@@ -2,6 +2,7 @@ package com.cloud.cache.redis;
 
 import com.cloud.cache.redis.lock.CustomerLettuceLock;
 import com.cloud.cache.redis.lock.event.LockEvent;
+import com.cloud.cache.redis.lock.handler.ClearingEventHandler;
 import com.cloud.cache.redis.lock.handler.LockEventHandler;
 import com.cloud.framework.spring.util.SpringUtils;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -102,7 +103,7 @@ public class RedisConfiguration implements EnvironmentAware {
         int bufferSize=1024;
         Disruptor<LockEvent> disruptor =
                 new Disruptor<>( LockEvent::new, bufferSize, DaemonThreadFactory.INSTANCE);
-        disruptor.handleEventsWith(new LockEventHandler());
+        disruptor.handleEventsWith(new LockEventHandler()).then(new ClearingEventHandler());
         disruptor.start();
         return disruptor;
     }

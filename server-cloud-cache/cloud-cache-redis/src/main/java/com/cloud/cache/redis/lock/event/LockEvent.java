@@ -40,4 +40,12 @@ public class LockEvent {
         return customerLettuceLock;
     }
 
+    /**
+     * 清空数据
+     * @param lockEvent
+     */
+    public void clear(LockEvent lockEvent) {
+        System.out.println(lockEvent.getClass()+"我是被清空对象实例");
+        lockEvent=null;
+    }
 }
