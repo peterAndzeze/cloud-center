@@ -1,8 +1,7 @@
 package com.sw.cloud.center.common.dailytools.date;
 
-import com.sw.cloud.center.common.dailytools.string.StringUtils;
+
 import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;

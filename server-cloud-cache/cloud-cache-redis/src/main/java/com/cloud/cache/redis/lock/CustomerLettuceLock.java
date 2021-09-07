@@ -279,7 +279,6 @@ public class CustomerLettuceLock {
 
         @Override
         public void run() {
-            System.out.println("为什么不执行");
             CustomerLettuceLock customerLettuceLock = SpringUtils.getBean(CustomerLettuceLock.class);
             Disruptor disruptor = SpringUtils.getBean(Disruptor.class);
             Map<String, LockContent> lockContentMap = customerLettuceLock.getLockContentMap();
@@ -288,14 +287,10 @@ public class CustomerLettuceLock {
             }
             Set<Map.Entry<String, LockContent>> entries =lockContentMap.entrySet();
             for (Map.Entry<String, LockContent> entry : entries) {
-                System.out.println("数据在这行了");
                 LockContent lockContent = entry.getValue();
                 long expireTime = lockContent.getExpireTime();
                 // 减少线程池中任务数量
                 if ((expireTime - System.currentTimeMillis())/ 1000 < TIME_SECONDS_FIVE) {
-                    System.out.println("expireTime:"+expireTime);
-
-                    int bufferSize = 1024;
                     //线程池异步续约
                     RingBuffer<LockEvent> ringBuffer = disruptor.getRingBuffer();
                     ByteBuffer bb = ByteBuffer.allocate(8);

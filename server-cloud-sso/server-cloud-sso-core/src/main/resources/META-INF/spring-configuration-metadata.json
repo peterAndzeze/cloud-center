@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "sso",
+      "type": "com.cloud.sso.core.config.SsoConfigProperties",
+      "sourceType": "com.cloud.sso.core.config.SsoConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sso.serverType",
+      "type": "java.lang.String",
+      "description": " 服务实例类型 默认是server 客户端是client",
+      "sourceType": "com.cloud.sso.core.config.SsoConfigProperties"
+    },
+    {
+      "name": "sso.ssoServer",
+      "type": "java.lang.String",
+      "description": "ssoServer 地址",
+      "sourceType": "com.cloud.sso.core.config.SsoConfigProperties"
+    },
+    {
+      "name": "sso.ticketTimeout",
+      "type": "java.lang.long",
+      "description": "token过期时间 默认18000 单位毫秒",
+      "sourceType": "com.cloud.sso.core.config.SsoConfigProperties"
+    },
+    {
+      "name": "sso.excludedPaths",
+      "type": "java.lang.String",
+      "description": "过滤路径,多个用逗号分割",
+      "sourceType": "com.cloud.sso.core.config.SsoConfigProperties"
+    }
+  ],
+  "hints": []
+}

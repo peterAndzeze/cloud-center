@@ -17,8 +17,8 @@
         <module>server-cloud-cache</module>
         <module>cloud-front-ui</module>
         <module>cloud-dashboard</module>
-        <module>cloud-sso</module>
         <module>server-cloud-message</module>
+        <module>server-cloud-sso</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -30,9 +30,20 @@
         <swagger.version>3.0.0</swagger.version>
         <swagger-models.version>1.5.24</swagger-models.version>
         <guava.version>30.0-jre</guava.version>
-
+        <junit.verison>4.13.2</junit.verison>
+        <disruptor.version>3.4.4</disruptor.version>
         <lombok.version>1.18.16</lombok.version>
+        <joda-time.verison>2.10.10</joda-time.verison>
 
+
+        <cloud-front-ui.verison>1.0</cloud-front-ui.verison>
+        <javax-servlet-api.verion>4.0.1</javax-servlet-api.verion>
+
+        <!--自定义框架-->
+        <base-common-dailytools.version>1.0</base-common-dailytools.version>
+        <cloud-cahce-redis.version>1.0</cloud-cahce-redis.version>
+        <base-framework-spring.verison>1.0</base-framework-spring.verison>
+        <server-cloud-sso-core.version>1.0</server-cloud-sso-core.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -108,8 +119,51 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.13.2</version>
+                <version>${junit.verison}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.verison}</version>
+            </dependency>
+            <!--自定义服务集版本-->
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-base-common-dailytools</artifactId>
+                <version>${base-common-dailytools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>cloud-cache-redis</artifactId>
+                <version>${cloud-cahce-redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-base-framework-spring</artifactId>
+                <version>${base-framework-spring.verison}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>cloud-front-ui</artifactId>
+                <version>${cloud-front-ui.verison}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax-servlet-api.verion}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-cloud-sso-core</artifactId>
+                <version>${server-cloud-sso-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

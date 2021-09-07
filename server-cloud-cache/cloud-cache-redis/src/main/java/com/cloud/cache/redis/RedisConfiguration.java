@@ -4,6 +4,7 @@ import com.cloud.cache.redis.lock.CustomerLettuceLock;
 import com.cloud.cache.redis.lock.event.LockEvent;
 import com.cloud.cache.redis.lock.handler.ClearingEventHandler;
 import com.cloud.cache.redis.lock.handler.LockEventHandler;
+import com.cloud.cache.redis.util.RedisCacheUtil;
 import com.cloud.framework.spring.util.SpringUtils;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -81,10 +82,6 @@ public class RedisConfiguration implements EnvironmentAware {
         redisUri.setDatabase(database);
         return redisUri;
     }
-    @Bean
-    public SpringUtils springUtils(){
-        return new SpringUtils();
-    }
 
     /**
      * 分布式锁工具类
@@ -114,6 +111,13 @@ public class RedisConfiguration implements EnvironmentAware {
         this.environment=environment;
     }
 
-
+    /**
+     * 初始化redis工具类
+     * @return
+     */
+    @Bean
+    public RedisCacheUtil redisCacheUtil(){
+        return new RedisCacheUtil();
+    }
 
 }

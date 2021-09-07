@@ -68,7 +68,22 @@
             <dependency>
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
-                <version>3.4.4</version>
+                <version>${disruptor.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-base-common-dailytools</artifactId>
+                <version>${base-common-dailytools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sw</groupId>
+                <artifactId>server-base-framework-spring</artifactId>
+                <version>${base-framework-spring.verison}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

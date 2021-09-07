@@ -20,7 +20,6 @@ import java.util.concurrent.TimeUnit;
  * @author: sw
  * @date: 2021/9/1
  **/
-@Component
 public class RedisCacheUtil {
     @Autowired
     public RedisTemplate redisTemplate;
